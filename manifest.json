@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+
+    "name": "Disgo Mask",
+    "description": "Dispatch Labs Meta-Mask Like `Dispatch Node` Interface",
+    "version": "1.0",
+    "update_url": "http://disgo-mask.dispatch.app",
+
+    "permissions": [
+        "activeTab",
+		"storage",
+		"management",
+		"notifications"
+    ],
+
+    "browser_action": {
+        "default_icon": "icon.png",
+		"default_title": "Disgo Mask",
+		"default_popup": "popup.html"
+    },
+
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+	},
+
+	"content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com https://code.getmdl.io; object-src 'self'"
+}

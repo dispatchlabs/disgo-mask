@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.15.0/css/jquery.terminal.min.css">
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script src="jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.terminal/1.15.0/js/jquery.terminal.min.js"></script>
+		<script src="star_wars.js"></script>
+		<script src="popup.js"></script>
+	</head>
+	<body>
+		<div class="mdl-tabs mdl-js-tabs" style="background-color: white;">
+			<div class="mdl-tabs__tab-bar">
+				<a href="#tab1" class="mdl-tabs__tab"><span id="tab1-label">Run TX</span></a>
+				<a href="#tab2" class="mdl-tabs__tab"><span id="tab2-label">Wallet</span></a>
+				<a href="#tab3" class="mdl-tabs__tab"><span id="tab3-label">Star Wars</span></a>
+			</div>
+			<div class="mdl-tabs__panel is-active" id="tab1">
+				<div class="mdl-card">
+					<div class="mdl-card__title">
+						<img src="logo.png" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+					</div>
+					<div class="mdl-card__supporting-text">
+						<form action="#">
+							<div class="mdl-textfield mdl-js-textfield">
+								<textarea id="TxAsJson" class="mdl-textfield__input" type="text" rows= "7" id="sample5" ></textarea>
+								<label class="mdl-textfield__label" for="sample5">Paste TX Here</label>
+							</div>
+						</form>
+						<form action="#">
+								<div class="mdl-textfield mdl-js-textfield">
+									<textarea id="TxResult" class="mdl-textfield__input" type="text" rows= "7" id="sample5" readonly ></textarea>
+									<label class="mdl-textfield__label" for="sample5"></label>
+								</div>
+							</form>
+						</div>
+					<div class="mdl-card__actions" style="float: right;">
+						<button id="TxRunner" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+							Run
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="mdl-tabs__panel" id="tab2">
+				<iframe src="http://wallet.dispatchlabs.io" style="width: 300px; height: 550px;"></iframe>
+			</div>
+			<div class="mdl-tabs__panel" id="tab3" style="background-color: black;">
+				<div id="starwarsterm" style="font-size: 12px; color: rgb(0, 255, 0);">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
